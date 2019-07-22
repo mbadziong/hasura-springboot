@@ -1,0 +1,13 @@
+query PetQuery {
+    pet {
+        id,
+        name
+    }
+}
+
+mutation PetMutation($name: String!) {
+    createPet(name: $name) {
+        id,
+        name
+    }
+}
