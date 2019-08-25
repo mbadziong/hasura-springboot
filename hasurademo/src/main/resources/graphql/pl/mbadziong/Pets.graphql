@@ -4,7 +4,7 @@ type Pet {
 }
 
 type Mutation {
-    createPet(name: String!): Pet
+    insert_pet(name: String!): Pet
 }
 
 type Query {

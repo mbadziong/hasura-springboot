@@ -6,8 +6,10 @@ query PetQuery {
 }
 
 mutation PetMutation($name: String!) {
-    createPet(name: $name) {
-        id,
-        name
+    insert_pet(objects: {name: $name}) {
+        returning {
+            id
+            name
+        }
     }
 }
